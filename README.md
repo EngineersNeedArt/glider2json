@@ -1,7 +1,6 @@
 # glider2json
 
-Command-line tool that converts Glider 4.0 (classic Mac) house files into a
-single JSON house file for the modern rewrite.
+Command-line tool that converts Glider 4.0 (classic Mac OS) house files into JSON house files for the modern rewrite (Glider Vintage).
 
 ## Build
 
