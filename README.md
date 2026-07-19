@@ -29,6 +29,13 @@ glider2json [-o output] house_file [house_file ...]
   (case-insensitive check, so `-o Foo.HOUSE4` won't get doubled up).
 - `-h` / `--help` prints usage.
 
+## Example
+
+```
+glider2json -o The\ House.house4 The\ House The\ House\ 2
+```
+Reads both the original *Glider 4.0* house files at: `The House` and `The House 2` and outputs a new JSON-based file called `The House.house4` for use with *Glider Vintage*.
+
 ## What changed from the original Xcode app
 
 - `HouseConvert.c` / `HouseConvert.h` / `cJSON.c` / `cJSON.h` are unchanged —
