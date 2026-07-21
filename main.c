@@ -101,14 +101,14 @@ static HouseStruct *readHouseFile (const char *path) {
 			"Attempting to read it anyway.\n",
 			path, fileSize, sizeof (HouseStruct));
 	}
-
+	
 	HouseStruct *houseData = (HouseStruct *) calloc (1, sizeof (HouseStruct));
 	if (houseData == NULL) {
 		fprintf (stderr, "error: out of memory reading '%s'.\n", path);
 		fclose (fp);
 		return NULL;
 	}
-
+	
 	size_t bytesToRead = (size_t) fileSize < sizeof (HouseStruct) ? (size_t) fileSize : sizeof (HouseStruct);
 	size_t bytesRead = fread (houseData, 1, bytesToRead, fp);
 	fclose (fp);

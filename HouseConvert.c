@@ -455,6 +455,11 @@ bool _houseAddRoomsToJSON (cJSON *roomArray, RoomStruct roomsData[40], int roomC
 			printf ("_houseAddRoomsToJSON(); cJSON_AddStringToObject() failed to add name.\n");
 			goto bail;
 		}
+		if (cJSON_AddNumberToObject (oneRoom, "index", roomIndexDelta + r) == NULL) {
+			printf ("_houseAddRoomsToJSON(); cJSON_AddNumberToObject() failed to add index.\n");
+			goto bail;
+		}
+		
 		if (cJSON_AddStringToObject (oneRoom, "background", _houseBackgroundFromPictID (roomData->backPictID)) == NULL) {
 			printf ("_houseAddRoomsToJSON(); cJSON_AddStringToObject() failed to add background.\n");
 			goto bail;
